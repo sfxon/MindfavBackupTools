@@ -31,6 +31,8 @@ eines für jeden Monat.
 
 Dieser Ansatz kann dazu führen, dass gerade bei großen Backup-Dateien über längere Zeit viel Speicherplatz verbraucht wird.
 
+![Programmablaufplan unseres Backup-Rotation Schemas](docs/Backup-Rotation-Schema-de.png)
+
 ## Documentation in english, Englischsprachige Dokumentation
 
 A set of tools for working with backups. In a first step, I will add a command to rotate backups.
@@ -57,3 +59,5 @@ So this tool does keep backups over a longer time,
 one for every month.
 
 This approach can fill disks. So be careful about it.
+
+![Flowchart for backup rotatino schema](docs/Backup-Rotation-Scheme-en.png)
