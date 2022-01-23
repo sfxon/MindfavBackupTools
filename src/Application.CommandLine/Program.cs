@@ -12,6 +12,7 @@ namespace Application.CommandLine
     using System.Reflection;
     using Application.CommandLine.Tools;
     using DomainLayer.BusinessLogic.Commands;
+    using DomainLayer.BusinessLogic.Configuration;
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;
 
@@ -83,20 +84,13 @@ namespace Application.CommandLine
 
             services.AddSingleton<IFileSystem>(fileSystem);
 
-            /*
             services.Configure<ApplicationConfiguration>(
                 options => configuration.GetSection("AppSettings").Bind(options));
-            */
+
             services.AddTransient<RotateBackupLogic>();
 
-            /*
             services.AddTransient<ConfigurationWriter>();
             services.AddTransient<SetLogic>();
-            services.AddTransient<ChangelogLogic>();
-
-            services.AddTransient<IVersionSystem, Git>();
-            services.AddTransient<ITicketSystem, Mantis>();
-            */
 
             serviceProvider = services.BuildServiceProvider();
 
@@ -143,7 +137,6 @@ namespace Application.CommandLine
         /// </summary>
         private static void PrintUsage()
         {
-            string applicationName = Assembly.GetEntryAssembly()?.GetName().Name;
             Cmd.Print(Messages.Usage);
         }
 

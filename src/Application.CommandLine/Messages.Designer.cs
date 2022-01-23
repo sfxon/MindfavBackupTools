@@ -19,7 +19,7 @@ namespace Application.CommandLine {
     // -Klasse über ein Tool wie ResGen oder Visual Studio automatisch generiert.
     // Um einen Member hinzuzufügen oder zu entfernen, bearbeiten Sie die .ResX-Datei und führen dann ResGen
     // mit der /str-Option erneut aus, oder Sie erstellen Ihr VS-Projekt neu.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Messages {
@@ -57,6 +57,49 @@ namespace Application.CommandLine {
             }
             set {
                 resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Unknown configuration option provided. Please check your input. ähnelt.
+        /// </summary>
+        internal static string SetCommandInvalidOptionError {
+            get {
+                return ResourceManager.GetString("SetCommandInvalidOptionError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die The set command can be used to save options. It has to provide the &lt;option&gt;, that should be written.
+        ///It also has to provide a &lt;value&gt; that should be written. If the value, that should be written, is empty or contains whitespaces, double quotes (&quot;) can be used, to escape the value.
+        ///
+        ///Available &lt;option&gt;s:
+        ///  BackupRotationPath - Path, which contains the backups to be rotated.
+        /// ähnelt.
+        /// </summary>
+        internal static string SetCommandUsage {
+            get {
+                return ResourceManager.GetString("SetCommandUsage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Error. Cannot write configuration. The provided parameter is wrong or not given. ähnelt.
+        /// </summary>
+        internal static string SetCommandUsageError {
+            get {
+                return ResourceManager.GetString("SetCommandUsageError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die 
+        ///          Usage: set &lt;option&gt; &lt;value&gt;
+        ///{0} ähnelt.
+        /// </summary>
+        internal static string SetCommandUsageTitle {
+            get {
+                return ResourceManager.GetString("SetCommandUsageTitle", resourceCulture);
             }
         }
         

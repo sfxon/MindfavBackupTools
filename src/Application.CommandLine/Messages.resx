@@ -101,4 +101,23 @@
   <data name="Usage" xml:space="preserve">
     <value><![CDATA[Tool for generating, managing and working with backups]]></value>
   </data>
+  <data name="SetCommandUsageError" xml:space="preserve">
+     <value>Error. Cannot write configuration. The provided parameter is wrong or not given.</value>
+  </data>
+	<data name="SetCommandUsageTitle" xml:space="preserve">
+      <value>
+          <![CDATA[Usage: set <option> <value>
+{0}]]></value>
+  </data>
+  <data name="SetCommandInvalidOptionError" xml:space="preserve">
+     <value>Unknown configuration option provided. Please check your input.</value>
+  </data>
+  <data name="SetCommandUsage" xml:space="preserve">
+     <value><![CDATA[The set command can be used to save options. It has to provide the <option>, that should be written.
+It also has to provide a <value> that should be written. If the value, that should be written, is empty or contains whitespaces, double quotes (") can be used, to escape the value.
+
+Available <option>s:
+  BackupRotationPath - Path, which contains the backups to be rotated.
+]]></value>
+  </data>
 </root>
