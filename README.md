@@ -1,7 +1,7 @@
 # MindfavBackupTools
 
 English/Deutsch
-This documentation is written in 2 languages: german and englisch.
+This documentation is written in 2 languages: german and english.
 Diese Dokumentation ist in zwei Sprachen geschrieben: Deutsch und Englisch.
 
 ## Deutschsprachige Dokumentation - Documentation in German
