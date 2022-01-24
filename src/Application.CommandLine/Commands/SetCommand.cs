@@ -52,7 +52,7 @@ namespace Application.CommandLine.Commands
         }
 
         /// <summary>
-        /// Information über fehlerhafte Verwendung des Befehls.
+        /// Print error about wrong usage of the command.
         /// </summary>
         public static void PrintUsageError()
         {

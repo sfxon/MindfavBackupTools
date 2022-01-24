@@ -120,4 +120,7 @@ Available <option>s:
   BackupRotationPath - Path, which contains the backups to be rotated.
 ]]></value>
   </data>
+  <data name="RotateCommandUsageError" xml:space="preserve">
+     <value>Error, cannot rotate backups. Not enough or wrong parameters provided to the command.</value>
+  </data>
 </root>

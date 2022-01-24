@@ -6,6 +6,7 @@
 namespace Application.CommandLine.Commands
 {
     using System;
+    using Application.CommandLine.Tools;
     using DomainLayer.BusinessLogic.Commands;
     using Microsoft.Extensions.DependencyInjection;
 
@@ -23,21 +24,29 @@ namespace Application.CommandLine.Commands
         /// <returns>True, if everything went well, otherwise false.</returns>
         public static bool Rotate(IServiceProvider serviceProvider, string[] args)
         {
+
             // Prüfen, ob die benötigten Kommandozeilenparameter angegeben wurden.
-            /*
             if (
-                args.Length != 3 ||
-                string.IsNullOrEmpty(args[1]) ||
-                string.IsNullOrEmpty(args[2]))
+                args.Length != 2 ||
+                string.IsNullOrEmpty(args[1]))
             {
-                SetCommand.PrintUsageError();
+                RotateCommand.PrintUsageError();
                 return false;
             }
-            */
+
+            string path = args[1];
 
             // Falls ja -> Einstellung über Config Writer schreiben.
             var rotateBackupLogic = serviceProvider.GetRequiredService<RotateBackupLogic>();
-            return rotateBackupLogic.Rotate();
+            return rotateBackupLogic.Rotate(path);
+        }
+
+        /// <summary>
+        /// Print error about wrong usage of the program.
+        /// </summary>
+        public static void PrintUsageError()
+        {
+            Cmd.PrintError(Messages.RotateCommandUsageError);
         }
     }
 }

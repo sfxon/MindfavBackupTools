@@ -61,6 +61,15 @@ namespace Application.CommandLine {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Error, cannot rotate backups. Not enough or wrong parameters provided to the command. ähnelt.
+        /// </summary>
+        internal static string RotateCommandUsageError {
+            get {
+                return ResourceManager.GetString("RotateCommandUsageError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Unknown configuration option provided. Please check your input. ähnelt.
         /// </summary>
         internal static string SetCommandInvalidOptionError {
