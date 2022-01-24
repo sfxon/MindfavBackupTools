@@ -113,7 +113,13 @@ namespace Application.CommandLine {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Tool for generating, managing and working with backups ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Tool for generating, managing and working with backups.
+        ///Available options:
+        ///
+        ///set &lt;OptionName&gt; &lt;value&gt; - This command updates a setting in applicationConfiguration.json. Available settings: RotationFoldersDateCultureInfo with options for example: de-DE, en-US. Default is en-US.
+        ///
+        ///rotate &lt;Directory&gt; - Deletes old folders in given Directory. Tries to read the subfolder names as Dates. You can use the application setting RotationFoldersDateCultureInfo to set the culture.	
+        /// ähnelt.
         /// </summary>
         internal static string Usage {
             get {

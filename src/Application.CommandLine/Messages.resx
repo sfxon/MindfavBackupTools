@@ -99,7 +99,13 @@
 		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
 	</resheader>
   <data name="Usage" xml:space="preserve">
-    <value><![CDATA[Tool for generating, managing and working with backups]]></value>
+    <value><![CDATA[Tool for generating, managing and working with backups.
+Available options:
+
+set <OptionName> <value> - This command updates a setting in applicationConfiguration.json. Available settings: RotationFoldersDateCultureInfo with options for example: de-DE, en-US. Default is en-US.
+
+rotate <Directory> - Deletes old folders in given Directory. Tries to read the subfolder names as Dates. You can use the application setting RotationFoldersDateCultureInfo to set the culture.	
+]]></value>
   </data>
   <data name="SetCommandUsageError" xml:space="preserve">
      <value>Error. Cannot write configuration. The provided parameter is wrong or not given.</value>

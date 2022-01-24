@@ -14,7 +14,7 @@ Die Anwendung wir din C# mit Visual Studio 2022 unter .NET 6 geschrieben.
 #### set
 
 Dieser Befehl aktualisiert eine Einstellung in applicationConfiguration.json.
-Verfügbare Optionen:
+Verfügbare Einstellungen:
 
 * RotationFoldersDateCultureInfo<br />
 Speichert das Format, in dem das Program Datumsangaben erwartet (en-US für YYYY-mm-dd; de-DE für dd.MM.YYYY).
@@ -51,7 +51,7 @@ Application written in C# within Visual Studio 2022, using .NET 6.
 #### set
 
 This command updates a setting in applicationConfiguration.json.
-Available options:
+Available settings:
 
 * RotationFoldersDateCultureInfo<br />
 Sets the format, the program expects dates in (en-US for YYYY-mm-dd; de-DE for dd.MM.YYYY).
