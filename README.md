@@ -62,7 +62,7 @@ This command will rotate backups. Rotation here means, it will delete old backup
 There are many different ideas about backup rotation. For a deeper dig, I suggest this wikipedia entry as a starting point:
 https://en.wikipedia.org/wiki/Backup_rotation_scheme
 
-I took a decision for the following sheme:
+I took a decision for the following scheme:
 
 1. Keep 3 most up-to-date backups
 Remove older backups
