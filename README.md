@@ -17,7 +17,7 @@ Dieser Befehl aktualisiert eine Einstellung in applicationConfiguration.json.
 Verfügbare Optionen:
 
 * RotationFoldersDateCultureInfo<br />
-Speichert das Format, in dem das Program Datumsangaben erwartet (en-US for YYYY-mm-dd; de-DE for dd.MM.YYYY).
+Speichert das Format, in dem das Program Datumsangaben erwartet (en-US für YYYY-mm-dd; de-DE für dd.MM.YYYY).
 
 #### rotate
 
