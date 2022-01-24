@@ -14,8 +14,11 @@ namespace DomainLayer.BusinessLogic.Configuration
     public sealed class ApplicationConfiguration
     {
         /// <summary>
-        /// Gets or sets path of the folder to rotate.
+        /// Gets or sets the culuture info for the folders in the rotation.
+        /// The folders that should be rotated are expected to be named by dates.
+        /// With the culture info, you can set a different date-format.
+        /// The default date is en-US.
         /// </summary>
-        public string BackupRotationPath { get; set; } = string.Empty;
+        public string RotationFoldersDateCultureInfo { get; set; } = "en-US";
     }
 }

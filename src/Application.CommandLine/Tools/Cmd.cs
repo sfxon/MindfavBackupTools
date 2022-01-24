@@ -34,7 +34,7 @@ namespace Application.CommandLine.Tools
         /// Formated output of message in a specific color in commandline.
         /// </summary>
         /// <param name="message">Message to print.</param>
-        /// <param name="color"><see cref="ConsoleColor"/></param>
+        /// <param name="color"><see cref="ConsoleColor"/>.</param>
         public static void PrintColoredText(string message, ConsoleColor color)
         {
             var currentColor = Console.ForegroundColor;

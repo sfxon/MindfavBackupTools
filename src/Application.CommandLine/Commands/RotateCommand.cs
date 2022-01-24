@@ -24,7 +24,6 @@ namespace Application.CommandLine.Commands
         /// <returns>True, if everything went well, otherwise false.</returns>
         public static bool Rotate(IServiceProvider serviceProvider, string[] args)
         {
-
             // Prüfen, ob die benötigten Kommandozeilenparameter angegeben wurden.
             if (
                 args.Length != 2 ||

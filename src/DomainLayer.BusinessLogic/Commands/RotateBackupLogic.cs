@@ -5,23 +5,31 @@
 
 namespace DomainLayer.BusinessLogic.Commands
 {
+    using System.Globalization;
     using System.IO.Abstractions;
+    using DomainLayer.BusinessLogic.Configuration;
     using DomainLayer.BusinessLogic.Exceptions;
+    using Microsoft.Extensions.Options;
 
     /// <summary>
     /// BusinessLogic for rotating backups.
     /// </summary>
     public class RotateBackupLogic
     {
+        private readonly ApplicationConfiguration applicationConfiguration;
         private readonly IFileSystem? fileSystem = null;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="RotateBackupLogic"/> class.
         /// </summary>
+        /// <param name="appConfig">Current application configuration.</param>
         /// <param name="fileSystem"><see cref="IFileSystem"/>.</param>
         /// <returns>True if successful, otherwise false.</returns>
-        public RotateBackupLogic(IFileSystem fileSystem)
+        public RotateBackupLogic(
+            IOptions<ApplicationConfiguration> appConfig, 
+            IFileSystem fileSystem)
         {
+            this.applicationConfiguration = appConfig.Value;
             this.fileSystem = fileSystem;
         }
 
@@ -94,7 +102,10 @@ namespace DomainLayer.BusinessLogic.Commands
             string realname = folder.Replace(path, string.Empty);
 
             // Fetch the date from folder
-            DateTime folderDate = Convert.ToDateTime(realname);
+            DateTime folderDate = Convert.ToDateTime(
+                realname,
+                CultureInfo.CreateSpecificCulture(
+                    this.applicationConfiguration.RotationFoldersDateCultureInfo));
 
             // Is the date in future?
             if (IsFolderDateInFuture(folderDate))

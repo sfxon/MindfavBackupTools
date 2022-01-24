@@ -10,6 +10,7 @@ namespace Application.CommandLine
     using System.IO.Abstractions;
     using System.Linq;
     using System.Reflection;
+    using Application.CommandLine.Commands;
     using Application.CommandLine.Tools;
     using DomainLayer.BusinessLogic.Commands;
     using DomainLayer.BusinessLogic.Configuration;
@@ -42,6 +43,7 @@ namespace Application.CommandLine
                 var commands = new List<Command>
                 {
                     new Command("rotate", RotateCommand),
+                    new Command("set", SetCommand),
                 };
 
                 // Suche den Befehl anhand des übergebenen Parameters.
@@ -149,6 +151,24 @@ namespace Application.CommandLine
         private static ResultCode RotateCommand(IServiceProvider serviceProvider, string[] args)
         {
             if (Commands.RotateCommand.Rotate(serviceProvider, args))
+            {
+                return ResultCode.Ok;
+            }
+            else
+            {
+                return ResultCode.Error;
+            }
+        }
+
+        /// <summary>
+        /// Command to save a setting.
+        /// </summary>
+        /// <param name="serviceProvider"><see cref="IServiceProvider"/>.</param>
+        /// <param name="args">Array of type string, which contains the commandline parameters.</param>
+        /// <returns><see cref="ResultCode"/>.</returns>
+        private static ResultCode SetCommand(IServiceProvider serviceProvider, string[] args)
+        {
+            if (Commands.SetCommand.Set(serviceProvider, args))
             {
                 return ResultCode.Ok;
             }
