@@ -11,7 +11,15 @@ Die Anwendung wir din C# mit Visual Studio 2022 unter .NET 6 geschrieben.
 
 ### Befehle
 
-rotate
+#### set
+
+Dieser Befehl aktualisiert eine Einstellung in applicationConfiguration.json.
+Verfügbare Optionen:
+
+* RotationFoldersDateCultureInfo<br />
+Speichert das Format, in dem das Program Datumsangaben erwartet (en-US for YYYY-mm-dd; de-DE for dd.MM.YYYY).
+
+#### rotate
 
 Dieser Befehl rotiert Backups. Rotation bedeutet hier, dass ältere Backups gelöscht werden.
 Es gibt viele verschiedene Ansätze zum Rotieren von Backups. Für tiefere Einblicke, empfehle ich diesen Wikipedia Artikel als Einstiegspunkt ins Thema:
@@ -40,7 +48,15 @@ Application written in C# within Visual Studio 2022, using .NET 6.
 
 ### Commands
 
-rotate
+#### set
+
+This command updates a setting in applicationConfiguration.json.
+Available options:
+
+* RotationFoldersDateCultureInfo<br />
+Sets the format, the program expects dates in (en-US for YYYY-mm-dd; de-DE for dd.MM.YYYY).
+
+#### rotate
 
 This command will rotate backups. Rotation here means, it will delete old backups.
 There are many different ideas about backup rotation. For a deeper dig, I suggest this wikipedia entry as a starting point:
